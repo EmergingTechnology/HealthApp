@@ -1,0 +1,10 @@
+# Created by https://www.gitignore.io
+
+### npm ###
+npm-debug.log
+
+### idea ###
+.idea
+
+### node-modules ###
+node_modules

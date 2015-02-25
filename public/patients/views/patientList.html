@@ -1,0 +1,35 @@
+<h2>Patient List</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Last Visit Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="patient in patients | orderBy:lastName:false">
+            <td>{{patient.firstName}}</td>
+            <td>{{patient.lastName}}</td>
+            <td>{{patient.phoneNo}}</td>
+            <td>{{patient.lastVisitDate}}</td>
+            <td>{{patient.Status}}</td>
+            <td>
+                <button ng-click="editPatient($index)">Edit</button>
+                <button ng-click="deletePatient($index)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <a href="#/add">Add Patient</a>
+        </td>
+    </tr>
+</table>

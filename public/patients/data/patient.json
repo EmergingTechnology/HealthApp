@@ -1,0 +1,31 @@
+[{
+    "firstName": "Clark",
+    "lastName": "Kent",
+    "phoneNo": "1234567890",
+    "lastVisitDate": "03-06-2012",
+    "Status": "Active"
+}, {
+    "firstName": "Bruce",
+    "lastName": "Wane",
+    "phoneNo": "1234567890",
+    "lastVisitDate": "12-09-2013",
+    "Status": "Inactive"
+}, {
+    "firstName": "Selina",
+    "lastName": "Kyle",
+    "phoneNo": "1234567890",
+    "lastVisitDate": "11-10-2014",
+    "Status": "Active"
+},{
+    "firstName": "Natalia",
+    "lastName": "Romanova",
+    "phoneNo": "1234567890",
+    "lastVisitDate": "19-02-2014",
+    "Status": "Inactive"
+},{
+    "firstName": "Elektra",
+    "lastName": "Natchios",
+    "phoneNo": "1234567890",
+    "lastVisitDate": "25-02-2014",
+    "Status": "Active"
+}]
