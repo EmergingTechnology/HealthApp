@@ -17,6 +17,10 @@ app.config(function($routeProvider) {
             templateUrl: 'views/patientDetails.html',
             controller: 'PatientsDetailController'
         })
+        .when('/chat', {
+            templateUrl: 'views/chat.html',
+            controller: 'ChatController'
+        })
         .otherwise({
             redirectTo: '/'
         });
