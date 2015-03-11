@@ -1,0 +1,33 @@
+#chat {
+    height: 400px;
+    align: center;
+    overflow: scroll;
+}
+#chatWrap {
+    float: left;
+    align: center;
+    border: 7px #000 solid;
+    padding: -20px;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    
+    box-sizing: border-box;
+}
+#contentWrap {
+    align: center;
+    display: none;
+}
+.field > span {
+    display: block;
+    overflow: hidden;
+    padding-right: 10px
+}
+.field input[type=text] {
+    width: 100%
+}
+.field input[type=button] {
+    float: right
+}

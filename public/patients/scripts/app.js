@@ -1,5 +1,6 @@
 var app = angular.module('jmatharuAssignment1', ['ngRoute']);
 
+
 /*Refernece : https://docs.angularjs.org/api/ngRoute/provider/$routeProvider
 and
 https://docs.angularjs.org/api/ngRoute/service/$route#example*/
@@ -19,7 +20,7 @@ app.config(function($routeProvider) {
         })
         .when('/chat', {
             templateUrl: 'views/chat.html',
-            controller: 'ChatController'
+            //controller: 'chatController'
         })
         .otherwise({
             redirectTo: '/'

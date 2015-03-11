@@ -1,44 +1,44 @@
 <div>
     <div>
-        <form name="myForm" ng-submit="submitPatientData()">
+        <form name="myForm" class="form-inline" ng-submit="submitPatientData()">
             <h2>Enter Details</h2>
-            <table class="table table-striped">
+            <table class="table">
                 <tbody>
-                    <tr>
+                    <tr class="warning">
                         <td align="right">First Name</td>
 
                         <td>
-                            <input required type="text" ng-model="patient.firstName" ng-pattren="\b[A-Z]+[0-9]+\b"/>
+                            <input required class="form-control" type="text" ng-model="patient.firstName" ng-pattren="\b[A-Z]+[0-9]+\b"/>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="warning">
                         <td align="right">Last Name</td>
 
                         <td>
-                            <input required type="text" ng-model="patient.lastName" ng-pattren="\b[A-Z]+[0-9]+\b" />
+                            <input required class="form-control" type="text" ng-model="patient.lastName" ng-pattren="\b[A-Z]+[0-9]+\b" />
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="warning">
                         <td align="right">Phone Number</td>
 
                         <td>
-                            <input type="text" name="phoneNo" ng-model="patient.phoneNo" ng-pattren="/[0-9]{10}/" ng-minlength="10" ng-maxlength="10" />
+                            <input type="text" class="form-control" name="phoneNo" ng-model="patient.phoneNo" ng-pattren="/[0-9]{10}/" ng-minlength="10" ng-maxlength="10" />
                             <span class="error" style="color:red;" ng-show="myForm.phoneNo.$error.minlength">Please Enter 10 Digit Phone Number, entered value is less than 10 digts.</span>
                             <span class="error" style="color:red;" ng-show="myForm.phoneNo.$error.maxlength">Please Enter 10 Digit Phone Number, entered value is more than 10 digts.</span>
                             <br>
                         </td>
                     </tr>
-                    <tr>
+                    <tr class="warning">
                         <td align="right">Last Visit Date</td>
 
                         <td>
-                            <input required type="text" ng-model="patient.lastVisitDate" />
+                            <input required class="form-control" type="text" ng-model="patient.lastVisitDate" />
                         </td>
                     </tr>
-                    <tr>
+                    <tr  class="warning">
                         <td align="right">Status</td>
 
-                        <td>
+                        <td >
                             <input type="radio" ng-model="patient.Status" value="Active"> Active</input>
                             <input type="radio" ng-model="patient.Status" value="Inactive"> In Active</input>
                         </td>
@@ -46,7 +46,7 @@
                     <tr>
                         <td></td>
                         <td>
-                            <button type="submit">Submit Data</button>
+                            <button class="btn btn-success" type="submit">Submit Data</button>
                         </td>
                     </tr>
                 </tbody>

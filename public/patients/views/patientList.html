@@ -1,5 +1,5 @@
-<h2>Patient List</h2>
-<table class="table table-bordered">
+<h2 align="center">Patient List</h2>
+<table class="table">
     <thead>
         <tr>
             <th>First Name</th>
@@ -10,15 +10,17 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="patient in patients | orderBy:lastName:false">
+        <tr class="success" ng-repeat="patient in patients | orderBy:lastName:false">
             <td>{{patient.firstName}}</td>
             <td>{{patient.lastName}}</td>
             <td>{{patient.phoneNo}}</td>
             <td>{{patient.lastVisitDate}}</td>
             <td>{{patient.Status}}</td>
             <td>
-                <button ng-click="editPatient($index)">Edit</button>
-                <button ng-click="deletePatient($index)">Delete</button>
+                <button class="btn btn-warning" ng-click="editPatient($index)">Edit</button>
+                <button class="btn btn-danger" ng-click="deletePatient($index)">Delete</button>
+                <a class="btn btn-default" href="/chat">Chat</a>
+                <!--http://localhost:4000/-->
             </td>
         </tr>
     </tbody>
@@ -29,7 +31,7 @@
         <td></td>
         <td></td>
         <td>
-            <a href="#/add">Add Patient</a>
+            <a class="btn btn-default" href="#/add">Add Patient</a>
         </td>
     </tr>
     <tr>
@@ -39,7 +41,7 @@
         <td></td>
         <td></td>
         <td>
-            <a href="#/chat">Chat</a>
+
         </td>
     </tr>
 </table>
