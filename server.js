@@ -5,6 +5,8 @@ var express = require('express'),
     io = require('socket.io').listen(server),
     mongoose = require('mongoose');
 
+var cool = require('cool-ascii-faces');
+
 nicknames = [];
 
 // Here we find an appropriate database to connect to, defaulting to
@@ -47,6 +49,7 @@ var Chat = mongoose.model('Message', chatSchema);
 
 //Directing to difrent URLs
 app.get('/', function(req, res) {
+    res.send(cool());
     res.sendfile(__dirname + '/public/patients/views/index.html');
 });
 
