@@ -4,6 +4,7 @@ var express = require('express'),
     server = require('http').createServer(app),
     io = require('socket.io').listen(server),
     mongoose = require('mongoose');
+    
 nicknames = [];
 
 server.listen(3000);
@@ -50,7 +51,7 @@ app.use(express.static(__dirname + '/public/patients'));
 io.sockets.on('connection', function(socket) {
 
     var query = Chat.find({});
-    query.sort('-created').limit(10).exec(function(err, docs) {
+    query.sort('-created').limit(5).exec(function(err, docs) {
         if (err) throw err;
         socket.emit('load old msgs', docs);
     });
