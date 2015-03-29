@@ -4,17 +4,28 @@ var express = require('express'),
     server = require('http').createServer(app),
     io = require('socket.io').listen(server),
     mongoose = require('mongoose');
-    
+
 nicknames = [];
 
-server.listen(3000);
+// Here we find an appropriate database to connect to, defaulting to
+// localhost if we don't find one.
+var uristring =
+    process.env.MONGOLAB_URI ||
+    process.env.MONGOHQ_URL ||
+    'mongodb://localhost/chat';
+
+// The http server will listen to an appropriate port, or default to
+// port 5000.
+var theport = process.env.PORT || 3000;
+
+server.listen(theport);
 
 //Connecting Mongo DB via Mongoose
-mongoose.connect('mongodb://localhost/chat', function(err) {
+mongoose.connect(uristring, function(err) {
     if (err) {
-        console.log(err)
+        console.log('ERROR connecting to: ' + uristring + '. ' + err);
     } else {
-        console.log('Connected to Database!!')
+        console.log('Succeeded connected to: ' + uristring);
     };
 });
 
